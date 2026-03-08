@@ -1451,9 +1451,9 @@ SENSOR_TYPES: list[SolintegModbusSensorEntityDescription] = [
     SolintegModbusSensorEntityDescription(
         key="battery_charge_discharge_power_target",
         register=50207,
-        scale=0.01,
+        scale=1,
         register_data_type=REGISTER_S16,
-        native_unit_of_measurement=UnitOfPower.KILO_WATT,
+        native_unit_of_measurement="x0.01 kW",
         device_class=SensorDeviceClass.POWER,
         state_class=SensorStateClass.MEASUREMENT,
         internal=True,
